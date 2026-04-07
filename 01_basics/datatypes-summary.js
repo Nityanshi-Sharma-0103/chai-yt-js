@@ -32,11 +32,46 @@ let myObj = {
 
 
 const myFunction = function(){
-    console.log("Hello World");
+    // console.log("Hello World");
     
 }
 
-console.log(typeof myFunction);
+// console.log(typeof myFunction);
 
 
 // arrays , objects , functions 
+
+
+// ------------------------------------------------------
+
+//MEMORY
+
+
+//STACK AND HEAP MEMORY 
+
+// STACK == PRIMITIVE TYPE == copy
+
+// HEAP == NON-PRIMITIVE TYPE == referrence == original 
+
+let myYoutubeName = "nitithinks.com"
+
+let anotherName = myYoutubeName
+anotherName = "explorewithniti"
+
+console.log(myYoutubeName);
+
+console.log(anotherName);
+
+
+
+let userOne = {
+    email: "user@google.com",
+    upi: "user@ybl",
+}
+
+let userTwo = userOne
+
+userTwo.email = "niti@google.com"
+
+console.log(userOne.email);
+console.log(userTwo.email); 
