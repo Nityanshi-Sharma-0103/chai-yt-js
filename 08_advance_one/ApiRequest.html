@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GitHub API Example</title>
+</head>
+
+<body>
+  <script>
+    // GitHub user API URL
+    const requestUrl = "https://api.github.com/users/hiteshchoudhary";
+
+    // Create XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Open request
+    xhr.open("GET", requestUrl);
+
+    // Track state changes
+    xhr.onreadystatechange = function () {
+
+      console.log("Ready State:", xhr.readyState);
+
+      // When request is complete
+      if (xhr.readyState === 4) {
+
+        // Convert JSON string into object
+        const data = JSON.parse(xhr.responseText);
+        console.log(typeof data);
+        
+
+        console.log("Full Data:", data);
+        console.log("Type:", typeof data);
+        console.log("Followers:", data.followers);
+        console.log("Name:", data.name);
+        console.log("Bio:", data.bio);
+        console.log("Profile Image:", data.avatar_url);
+      }
+    };
+
+    // Send request
+    xhr.send();
+  </script>
+</body>
+</html>
