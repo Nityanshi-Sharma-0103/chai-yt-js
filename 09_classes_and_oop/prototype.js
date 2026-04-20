@@ -1,0 +1,64 @@
+// let myName = "hitesh"
+// console.log(myName.length);
+
+let myHeroes = ["thor", "spiderman"];
+
+let heroPower = {
+  thor: "hammer",
+  spiderman: "sling",
+
+  getSpiderPower: function () {
+    // console.log(`Spidy power is ${this.spiderman}`);
+  },
+};
+
+Object.prototype.hitesh = function () {
+  //   console.log(`Hitesh is present in all objects`);
+};
+
+Array.prototype.heyHitesh = function () {
+  //   console.log(`Hitesh says hello`);
+};
+
+// heroPower.hitesh()
+// myHeroes.hitesh();
+// myHeroes.heyHitesh();
+// heroPower.heyHitesh();
+
+// =============== INHERITANCE ==================
+
+const User = {
+  name: "chai",
+  email: "chai@chai.com",
+};
+
+const Teacher = {
+  makeVideo: true,
+};
+
+const teachingSupport = {
+  isAvailable: false,
+};
+
+const TASupport = {
+  makeAssignment: "JS Assignment",
+  fullTime: true,
+  __proto__: teachingSupport,
+};
+
+Teacher.__proto__ = User;
+
+// modern prototype
+
+Object.setPrototypeOf(teachingSupport, Teacher);
+
+let anotherUsername = "ChaiAurCode          ";
+
+String.prototype.trueLength = function () {
+  console.log(`${this}`);
+  //   console.log(`${this.name}`);
+  console.log(`True length is: ${this.trim().length}`);
+};
+anotherUsername.trueLength();
+"hitesh".trueLength();
+"iceTea".trueLength();
